@@ -4,16 +4,16 @@
 // @version      2024-07-20
 // @description  Calculate how many bytes you could use each day
 // @author       You
-// @match        https://*.cordc.co/user
-// @match        https://*.cordc.xyz/user
-// @match        https://*.cordc.cc/user
-// @match        https://*.cordcloud.cloud/user
-// @match        https://*.cordc.net/user
+// @match        *://*.cordc.co/user
+// @match        *://*.cordc.xyz/user
+// @match        *://*.cordc.cc/user
+// @match        *://*.cordcloud.cloud/user
+// @match        *://*.cordc.net/user
 // @icon         https://cordc.net/favicon.ico
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     // 'use strict';
 
     var expirationDate;
@@ -63,7 +63,7 @@
         var dataPerDay = remainingDataValue / daysRemaining;
 
         // 显示弹窗
-        alert('今后每天可用的流量为: ' + dataPerDay.toFixed(2) + 'GB');
+        alert('还有 ' + daysRemaining + ' 天套餐到期\n' + '今后每天可用的流量为 ' + dataPerDay.toFixed(2) + ' GB');
     } else {
         alert('未找到匹配的元素或提取的数据');
     }
